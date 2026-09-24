@@ -1,4 +1,4 @@
-public class LinkedListReversal<E> {
+public class ReversedList<E> {
 
     private static class Node<E> {
         E data;

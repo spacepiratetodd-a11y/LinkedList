@@ -1,4 +1,4 @@
-public class SinglyLinkedList<E> {
+public class SingleLinkList<E> {
 
     private static class Node<E> {
         E data;
@@ -27,6 +27,29 @@ public class SinglyLinkedList<E> {
         }
 
         size++;
+    }
+
+    public E remove(int index) {
+        if (index < 0 || index >= size) return null;
+
+        // Case 1: remove head
+        if (index == 0) {
+            return popFront();
+        }
+
+        Node<E> current = head;
+        Node<E> previous = null;
+
+        for (int i = 0; i < index; i++) {
+            previous = current;
+            current = current.next;
+        }
+
+        // unlink the node
+        previous.next = current.next;
+        size--;
+
+        return current.data;
     }
 
     public E popFront() {

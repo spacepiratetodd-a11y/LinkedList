@@ -3,13 +3,14 @@ public class main {
     public static void main(String[] args) {
 
         // ---------------------------------------------------------
-        // 1. Singly Linked List Demo
+        // 1. Singly Linked List
         // ---------------------------------------------------------
         System.out.println("=== Singly Linked List ===");
-        SinglyLinkedList<Integer> sll = new SinglyLinkedList<>();
+        SingleLinkList<Integer> sll = new SingleLinkList<>();
         sll.add(10);
         sll.add(20);
         sll.add(30);
+        //sll.remove(2);
         System.out.println("SLL contents: " + sll);
 
         System.out.println("Pop front: " + sll.popFront());
@@ -20,7 +21,7 @@ public class main {
 
 
         // ---------------------------------------------------------
-        // 2. Doubly Linked List Demo
+        // 2. Doubly Linked List
         // ---------------------------------------------------------
         System.out.println("\n=== Doubly Linked List ===");
         DoublyLinked<String> dll = new DoublyLinked<>();
@@ -37,7 +38,7 @@ public class main {
 
 
         // ---------------------------------------------------------
-        // 3. Linked List Reversal Demo
+        // 3. Linked List Reversal
         // ---------------------------------------------------------
         System.out.println("\n=== Linked List Reversal ===");
         ReversedList<Integer> revList = new ReversedList<>();
@@ -52,7 +53,7 @@ public class main {
 
 
         // ---------------------------------------------------------
-        // 4. Loop N Times Demo (Version A)
+        // 4. Loop N Times
         // ---------------------------------------------------------
         System.out.println("\n=== Loop List N Times ===");
         LoopedList<String> loopList = new LoopedList<>();
