@@ -1,4 +1,4 @@
-public class DoublyLinkedList<E> {
+public class DoublyLinked<E> {
 
     private static class DNode<E> {
         E data;
