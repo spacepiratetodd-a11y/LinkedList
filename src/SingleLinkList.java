@@ -28,6 +28,12 @@ public class SingleLinkList<E> {
 
         size++;
     }
+    
+    public void add(int index, E value) {
+    	if (index < 0 || index > size) {
+            throw new IndexOutOfBoundsException();
+    	}
+    }
 
     public E remove(int index) {
         if (index < 0 || index >= size) return null;
