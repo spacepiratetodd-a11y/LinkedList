@@ -33,6 +33,26 @@ public class SingleLinkList<E> {
     	if (index < 0 || index > size) {
             throw new IndexOutOfBoundsException();
     	}
+    	
+    	Node<E> newNode = new Node<>(value);
+
+        if (index == 0) {
+            newNode.next = head;
+            head = newNode;
+            size++;
+            return;
+        }
+
+        Node<E> current = head;
+        for (int i = 0; i < index - 1; i++) {
+            current = current.next;
+        }
+        
+        newNode.next = current.next;
+        current.next = newNode;
+
+        size++;
+    	}
     }
 
     public E remove(int index) {
